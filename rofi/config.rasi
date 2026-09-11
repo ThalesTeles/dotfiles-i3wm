@@ -1,0 +1,40 @@
+configuration {
+    modi: "drun,scripts:/home/thales-usb/.config/rofi/scripts-hub.sh";
+    show-icons: false; 
+    font: "Monospace 12";
+}
+* {
+    /* Paleta idêntica ao fundo e texto do seu terminal URxvt */
+    bg: #181818; 
+    fg: #e5e5e5; 
+    accent: #444444; /* Cinza escuro para a barra de seleção */
+    
+    background-color: @bg;
+    text-color: @fg;
+}
+
+window {
+    width: 30%; 
+    border: 1px; 
+    border-color: @accent;
+    padding: 10px;
+}
+
+/* O container de cada linha */
+element {
+    padding: 5px;
+    background-color: transparent;
+    text-color: @fg;
+}
+
+/* A linha quando está selecionada */
+element selected {
+    background-color: @accent;
+    text-color: @fg; 
+}
+
+/* FORÇA O TEXTO A HERDAR A COR (Mata o azul padrão) */
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
+}
